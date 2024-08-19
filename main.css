@@ -22,16 +22,46 @@ body{
 
 
 .navContainer{
-    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center; 
     background-color: #000000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 75px;
+    z-index: 1000000;
+}
+
+/* .navbar {
+    
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    z-index: 1000;
+} */
+
+.hideLinkDiv {
+    transform: translateY(-100%);
+    transition: transform 2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.hideLinkDiv2 {
+    transform: translateY(-100%);
+    transition: transform 2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.hideNavElementContainer {
+    transform: translateY(-300%);
+    transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .navElementContainer{
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -39,7 +69,9 @@ body{
     color: #f5f5f5;
     /* border: 1px solid #ff0000; */
     padding: 0 35px;
+    transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+
 
 
 .logo{
@@ -110,6 +142,9 @@ body{
 
 .searchBtn,
 .loginBtn{ 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     background-color: transparent;
     border: none;
     font-size: 0.7em;
@@ -126,15 +161,15 @@ body{
 
 
 
-.search span svg,
-.login span svg{
+.search svg,
+.login svg{
     padding-top: 4px;
     width: 20px;
     height: 20px;
     fill: #888484;
 }
 
-.login span svg{
+.login svg{
     fill: #888484;
     padding: 0;
     padding-left: 4px;
@@ -151,6 +186,7 @@ body{
 
 
 .heroContainer{
+    margin-top: 75px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -170,18 +206,33 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7)
 }
 
+.overlayBlack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Black background, adjust as needed */
+    transition: height 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);/* Smooth transition for height */
+    z-index: 997; /* Ensure it's on top */
+  }
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.514); /* Semi-transparent overlay */
     box-shadow: inset 0 -50px 50px -20px rgba(0, 0, 0, 0.6);
-    z-index: 997;
+    z-index: 994;
 }
 
 .linkDiv{
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
     background-color: #000000a9;
     backdrop-filter: blur(10px);
     height: 60px;
@@ -192,6 +243,23 @@ body{
     width: 100%;
     padding: 0 35px;
     z-index: 999;
+    transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.linkDiv2{
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    height: 60px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 35px;
+    z-index: 999;
+    transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 
@@ -204,6 +272,18 @@ body{
     font-size: inherit;
     height: 100%;
     padding: 10px 36px;
+    cursor: pointer;
+}
+.linkDiv2 button{
+    /* font-family:'MercedesLight';
+    font-weight: 500; */
+    background-color: transparent;
+    border: none;
+    color: #f5f5f5;
+    font-size: inherit;
+    height: 100%;
+    padding: 10px 36px;
+    cursor: pointer;
 }
 
 .heroTextContainer{
@@ -211,12 +291,14 @@ body{
     top: 50%;
     left: 50%;
     width: 100%;
-    z-index: 999;
+    z-index: 996;
     left: 0;
     margin-left: 8.5714285714rem;
 }
 
 .headerDiv{
+    margin-bottom: 50px;
+    height: 50px;
     font-family: 'MercedesLight';
     color: #f5f5f5;
     font-size:min(2.8571428571rem,6vh,10vw);
@@ -259,9 +341,57 @@ body{
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    padding-top: 35px;
+    margin-top: 35px;
 }
 
+.textPlusButton p{
+    color: #f5f5f5;
+    font-size: min(1.2857142857rem,3vh,5vw);
+}
+
+.discover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 15.7142857143rem;
+    padding: .4285714286rem 1.1428571429rem;
+    font-size: 1em;
+    border-radius: 1.1428571429rem;
+    border: none;
+    margin-top: 15px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.discover:hover{
+    background-color: #0078d6;
+    color: white;
+    
+}
+
+.discover svg{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+.sectionOne{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.linkDiv2{
+    display: none;
+}
+
+.introVideoDiv{
+    display: none;
+}
+
+.logoLarge{
+    display: none;
+}
 
 
 /* Extra small devices (phones, less than 576px) */
@@ -281,10 +411,17 @@ body{
     .linkDiv{
         display: none;
     }
+    .linkDiv2{
+        display: none;
+    }
 
     .logo{
         width: 35px;
         height: 35px;
+    }
+
+    .heroContainer{
+        margin-top: 70px;
     }
 
     .heroTextContainer{
@@ -307,15 +444,47 @@ body{
         justify-content: center;
         width: 100%;
         flex-direction: column;
-        padding-top: 35px;
+        margin: 0;
         color: #f5f5f5;
     }
 
     .headerDiv p{
-        .headerDiv{
-           font-size: 16px;
-        }
+        font-size:min(1.8571428571rem,6vh,10vw);
     }
+
+
+
+}
+
+@media  (max-width: 1378px) { 
+    .linkDiv button{
+        font-size: 0.85rem;
+        background-color: transparent;
+        border: none;
+        color: #f5f5f5;
+        height: 100%;
+        padding: 10px 24px;
+    }
+    .linkDiv2 button{
+        font-size: 0.85rem;
+        background-color: transparent;
+        border: none;
+        color: #f5f5f5;
+        height: 100%;
+        padding: 10px 24px;
+    }
+
+    .textPlusButton{
+        height: 100px;
+    }
+
+    .navContainer{
+        height: 75px !important;
+    }
+
+ 
+
+    
 }
 
 /* Medium devices (desktops, 768px and up) */
@@ -336,8 +505,94 @@ body{
 }
 
 /* Extra large devices (1200px and up) */
-@media (min-width: 1200px) { 
-    /* Your styles here */
+@media (min-width: 1380px) { 
+    .headerDiv{
+        height: 100px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .navContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .navElementContainer{
+        top: 15px;
+    }
+
+
+
+    .linkDiv2{
+        display: flex;
+        top: 300px;
+        background-color: #000000;
+        backdrop-filter: blur(0px);
+    }
+
+
+    .hideLinkDiv2 {
+        transform: translateY(-900%);
+        transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .hideLinkDivLarge{
+        
+    }
+
+    .hideLinkDiv{
+        transform: translateY(-200%);
+        transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .hideNavElementContainer {
+        transform: translateY(-300%);
+        transition: transform 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .introVideoDiv{
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        width: 200px; /* Desired width */
+        height: 150px; /* Desired height */
+        background-color: #000;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        z-index: 10000000;
+    }
+
+    .introVideoDiv video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+
+      /* .logoLarge{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+      }
+
+      .logoLarge img{
+        width: 90px;
+        width: 90px;
+        padding-bottom: 20px;
+      } */
+
+
+
+
+
+
 }
 
 
