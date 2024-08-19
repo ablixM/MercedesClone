@@ -36,8 +36,8 @@ if (window.innerWidth > 1368) {
         divElement.style.height = "300px";
         links2.classList.remove("hideLinkDiv2");
       } else {
-        videoElement.style.transform = "scale(0.5)";
-        divElement.style.height = "75px";
+        videoElement.style.transform = "scale(0.4)";
+        divElement.style.height = "80px";
         links2.classList.add("hideLinkDiv2");
         logo.style.display = "flex";
         logo.style.transition = "height 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)";

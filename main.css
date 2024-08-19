@@ -230,7 +230,7 @@ body{
 
 .linkDiv{
     position: fixed;
-    top: 75px;
+    top: 80px;
     left: 0;
     right: 0;
     background-color: #000000a9;
@@ -457,6 +457,10 @@ body{
 }
 
 @media  (max-width: 1378px) { 
+
+    .linkDiv{
+        top: 75px;
+    }
     .linkDiv button{
         font-size: 0.85rem;
         background-color: transparent;
@@ -523,7 +527,7 @@ body{
     }
 
     .navElementContainer{
-        top: 15px;
+        top: 25px;
     }
 
 
@@ -559,7 +563,7 @@ body{
         display: flex;
         transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
         width: 200px; /* Desired width */
-        height: 150px; /* Desired height */
+        height: 200px; /* Desired height */
         background-color: #000;
         overflow: hidden;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);

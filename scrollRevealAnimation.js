@@ -3,6 +3,11 @@ ScrollReveal({
   duration: 1500,
   delay: 300,
 }).reveal(".linkDiv button", { delay: 100, origin: "bottom" });
+ScrollReveal({
+  distance: "30px",
+  duration: 1500,
+  delay: 300,
+}).reveal(".linkDiv2 button", { delay: 100, origin: "bottom" });
 
 ScrollReveal({
   distance: "30px",
