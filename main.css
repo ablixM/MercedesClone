@@ -459,7 +459,7 @@ body{
 @media  (max-width: 1378px) { 
 
     .linkDiv{
-        top: 75px;
+        top: 74px;
     }
     .linkDiv button{
         font-size: 0.85rem;
@@ -534,7 +534,7 @@ body{
 
     .linkDiv2{
         display: flex;
-        top: 300px;
+        top: 299px;
         background-color: #000000;
         backdrop-filter: blur(0px);
     }
