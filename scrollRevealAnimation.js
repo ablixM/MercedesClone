@@ -14,6 +14,11 @@ ScrollReveal({
   duration: 1500,
   delay: 300,
 }).reveal(".navElementContainer div", { delay: 100, origin: "top" });
+ScrollReveal({
+  distance: "30px",
+  duration: 1500,
+  delay: 300,
+}).reveal(".navElementContainerSmall div", { delay: 100, origin: "top" });
 
 // const headerThe = document.querySelector("#headerThe");
 // const headerTitle = document.querySelector("#headerTitle");

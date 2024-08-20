@@ -36,7 +36,7 @@ if (window.innerWidth > 1368) {
         divElement.style.height = "300px";
         links2.classList.remove("hideLinkDiv2");
       } else {
-        videoElement.style.transform = "scale(0.4)";
+        videoElement.style.transform = "scale(0.3)";
         divElement.style.height = "80px";
         links2.classList.add("hideLinkDiv2");
         logo.style.display = "flex";
@@ -65,6 +65,23 @@ if (window.innerWidth > 1368) {
   });
 }
 
+if (window.innerWidth < 578) {
+  const videoElement = document.querySelector(".introVideoDiv");
+  divElement.style.transition = "height 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)";
+  window.addEventListener("scroll", function () {
+    const divElement = document.querySelector(".navContainer");
+
+    if (window.innerWidth < 578) {
+      if (window.scrollY === 0) {
+        videoElement.style.transform = `scale(1)`;
+        divElement.style.height = "300px";
+      } else {
+        videoElement.style.transform = "scale(0.3)";
+        divElement.style.height = "80px";
+      }
+    }
+  });
+}
 // const introVideoDiv = document.querySelector(".introVideoDiv");
 // window.addEventListener("scroll", function () {
 //   const videoElement = document.querySelector(".introVideoDiv video");

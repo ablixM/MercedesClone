@@ -4,3 +4,8 @@
 // window.addEventListener("load", function () {
 //   localStorage.clear();
 // });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+  // gsap code here!
+});
