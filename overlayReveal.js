@@ -31,3 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animateReveal);
   }, 1500);
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+
+// });

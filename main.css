@@ -16,7 +16,7 @@
 
 body{
     font-family: sans-serif;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 
@@ -211,6 +211,18 @@ body{
     z-index: 997; /* Ensure it's on top */
   }
 
+.overlayBlackOne {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000070; /* Black background, adjust as needed */
+    transition: height 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);/* Smooth transition for height */
+    z-index: 995; /* Ensure it's on top */
+  }
+
 .overlay {
     border: none;
     position: absolute;
@@ -288,7 +300,7 @@ body{
     top: 40%;
     left: 50%;
     width: 100%;
-    z-index: 996;
+    z-index: 995;
     left: 0;
     margin-left: 8.5714285714rem;
 }
@@ -390,7 +402,8 @@ body{
 }
 
 .main{
-    border: 1px solid #ff0000;
+    position: relative;
+    /* border: 1px solid #ff0000; */
     height: 100vh;
 
 }
@@ -399,14 +412,41 @@ body{
     height: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
 }
 .sectionOne {
+    position: relative;
+    right: 0;
+    left: 0;
+    
     width: 100%;
-    height: 400px; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
     background-image: url('assets/image/mq8-original-aspect.jpeg');
     background-size: cover; /* Ensures the image covers the div */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
+    transition: top 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    z-index: 996;
 }
 
+
+
+.overlayImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+
+.sectionTwo {
+    margin-top: -50vh;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    transition: top 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    z-index: 996;
+    border: 1px solid red
+    ;
+}
 
 /* Extra small devices (phones, less than 576px) */
 @media screen and (min-width: 0px) and (max-width: 577px) {
@@ -587,6 +627,12 @@ body{
         justify-content: space-between;
     }
 
+    .sectionTwo {
+        margin-top: 220px;
+        height: 120vh; 
+        margin-top: -40vh;
+    }
+
 }
 
 @media screen and (min-width: 769px){
@@ -625,8 +671,11 @@ body{
         height: 75px;
     }
 
-    
-
+    .sectionTwo {
+        margin-top: 220px;
+        height: 120vh; 
+        margin-top: -30vh;
+    }
 }
 
 
@@ -706,6 +755,11 @@ body{
     }
 
 
+    .sectionTwo {
+        margin-top: 220px;
+        height: 120vh; 
+        margin-top: -50vh;
+    }
 
     
 
