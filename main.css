@@ -305,6 +305,20 @@ body{
     margin-left: 8.5714285714rem;
 }
 
+
+.sectionOne .heroTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+}
+
 .headerDiv{
     margin-bottom: 50px;
     height: 50px;
@@ -599,6 +613,7 @@ body{
         width: 100%;
         transform: translate(-50%, -50%);
     }
+
     .heroContainer video{
         
         width: 100%;
