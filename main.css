@@ -218,8 +218,8 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00000070; /* Black background, adjust as needed */
-    transition: height 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);/* Smooth transition for height */
+    background-color: #000000b7; /* Black background, adjust as needed */
+    transition: height 1s cubic-bezier(0.65, 0.05, 0.36, 1);/* Smooth transition for height */
     z-index: 995; /* Ensure it's on top */
   }
 
@@ -314,6 +314,9 @@ body{
     max-width: 37.7142857143rem;
 }
 
+.sectionOne .headerDiv{
+    margin-bottom: 10px; 
+}
 
 
 .textPlusButton{
@@ -350,6 +353,10 @@ body{
     width: 100%;
     flex-direction: column;
     margin-top: 35px;
+}
+
+.sectionOne #textPlusButton{
+    margin-top: 0px;
 }
 
 .textPlusButton p{
@@ -418,7 +425,7 @@ body{
     
     width: 100%;
     height: 100vh; /* Adjust as needed */
-    background-image: url('assets/image/mq8-original-aspect.jpeg');
+    background-image: url('assets/image/mq7-original-aspect\ \(5\).jpeg');
     background-size: cover; /* Ensures the image covers the div */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
@@ -435,6 +442,7 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 990;
 }
 
 
